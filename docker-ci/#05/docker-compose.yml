@@ -1,0 +1,9 @@
+version: "3"
+services:
+  count-redis:
+    image: "redis"
+    command: redis-server --port 6000
+  compose-app:
+    build: .
+    ports:
+      - "8080:8080"

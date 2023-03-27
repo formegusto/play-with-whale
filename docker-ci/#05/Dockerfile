@@ -2,7 +2,7 @@ FROM node:14
 
 WORKDIR /usr/app
 
-COPY package.json yark.lock ./
+COPY package.json yarn.lock ./
 
 RUN yarn
 

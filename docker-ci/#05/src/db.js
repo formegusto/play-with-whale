@@ -6,6 +6,7 @@ function DB() {
   function createClient() {
     const rClient = Redis.createClient({
       socket: {
+        host: "count-redis",
         port: 6000,
       },
       legacyMode: true,
