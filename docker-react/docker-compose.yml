@@ -1,0 +1,21 @@
+version: "3"
+services:
+  docker-react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/app/node_modules
+      - ./:/usr/app
+    stdin_open: true
+
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /usr/app/node_modules
+      - ./:/usr/app
+    command: ["yarn", "test"]
