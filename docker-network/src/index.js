@@ -4,6 +4,7 @@ import axios, { HttpStatusCode } from "axios";
 import process from "process";
 
 const [_1, _2, myhost, myport] = process.argv;
+console.log(process.argv);
 const app = Express();
 
 app.use(morgan("dev"));
