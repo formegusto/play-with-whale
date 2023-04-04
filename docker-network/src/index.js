@@ -28,5 +28,5 @@ app.post("/", async (req, res) => {
 });
 
 app.listen(myport, () => {
-  console.log("[Express] Start Server :)");
+  console.log(`[Express] Start ${myhost}:${myport} Server :)`);
 });
