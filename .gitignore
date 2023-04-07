@@ -154,3 +154,4 @@ bundles/
 vendor/pkg/
 pyenv
 Vagrantfile
+mysql_data

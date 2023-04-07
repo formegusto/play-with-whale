@@ -58,7 +58,8 @@ function App() {
             <button type="submit">확인</button>
           </form>
           <ul className="list">
-            {lists && lists.map((v, i) => <li key={i}>{v}</li>)}
+            {lists &&
+              lists.map(({ id, value }, i) => <li key={id}>{value}</li>)}
           </ul>
         </div>
       </header>
