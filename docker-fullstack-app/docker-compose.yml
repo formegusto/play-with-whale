@@ -6,7 +6,7 @@ services:
       context: ./frontend
     volumes:
       - ./frontend:/usr/app
-      # - /usr/app/node_modules
+      - /usr/app/node_modules
     stdin_open: true
   nginx:
     restart: always
@@ -22,7 +22,7 @@ services:
     container_name: app_backend
     volumes:
       - ./backend:/usr/app
-      # - /usr/app.node_modules
+      - /usr/app/node_modules
   mysql:
     platform: linux/x86_64
     build: ./mysql

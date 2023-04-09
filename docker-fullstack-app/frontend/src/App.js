@@ -30,7 +30,7 @@ function App() {
         const res = await axios.post("/api/value", { value });
 
         if (res.data.success) {
-          setLists((prevList) => [...prevList, res.data.value]);
+          setLists((prevList) => [...prevList, { value: res.data.value }]);
           setValue("");
         } else {
           throw new Error("실패유");
@@ -58,8 +58,7 @@ function App() {
             <button type="submit">확인</button>
           </form>
           <ul className="list">
-            {lists &&
-              lists.map(({ id, value }, i) => <li key={id}>{value}</li>)}
+            {lists && lists.map(({ value }, i) => <li key={i}>{value}</li>)}
           </ul>
         </div>
       </header>
